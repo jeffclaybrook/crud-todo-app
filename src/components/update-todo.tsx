@@ -18,7 +18,7 @@ export default function UpdateTodo({ todo }: { todo: Todo }) {
   setIsSubmitting(true)
 
   try {
-   const req = await fetch("https://crud-todo-app-kappa.vercel.app/api/todos", {
+   const req = await fetch("/api/todos", {
     method: "PUT",
     headers: {
      "Content-Type": "application/json"
@@ -33,7 +33,7 @@ export default function UpdateTodo({ todo }: { todo: Todo }) {
    }
 
    setIsDialogOpen(false)
-   mutate("https://crud-todo-app-kappa.vercel.app/api/todos")
+   mutate("/api/todos")
    setErrorMessage("")
   } catch (error) {
    console.error("Error updating todo:", error)

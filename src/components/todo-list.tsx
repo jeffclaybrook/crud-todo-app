@@ -13,7 +13,7 @@ export default function TodoList() {
   data: todos,
   error,
   isLoading
- } = useSWR<Todo[]>("https://crud-todo-app-kappa.vercel.app/api/todos", fetcher)
+ } = useSWR<Todo[]>("/api/todos", fetcher)
 
  if (isLoading) {
   return (
