@@ -3,12 +3,12 @@ import TodoList from "@/components/todo-list"
 
 export default function Home() {
  return (
-  <div className="max-w-7xl flex flex-col gap-10 mx-auto p-10">
+  <main className="flex flex-col gap-10 mx-auto p-4 lg:px-10">
    <div className="flex items-center justify-between">
-    <h1 className="text-4xl font-semibold">Todos</h1>
+    <h1 className="text-3xl font-semibold">Todos</h1>
     <CreateTodo />
    </div>
    <TodoList />
-  </div>
+  </main>
  )
 }

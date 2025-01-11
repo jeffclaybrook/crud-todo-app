@@ -39,7 +39,7 @@ export default function TodoList() {
    {todoList.length === 0 ? (
     <p className="text-center py-10 text-muted-foreground">All done for today!</p>
    ) : (
-    <div className="grid lg:grid-cols-3">
+    <div className="grid lg:grid-cols-3 gap-4">
      {todoList.map((todo) => (
       <Card key={todo.id}>
        <CardHeader>
