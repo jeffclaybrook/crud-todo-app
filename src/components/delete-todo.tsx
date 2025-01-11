@@ -6,13 +6,13 @@ import { Button } from "./ui/button"
 
 export default function DeleteTodo({ id }: { id: string }) {
  const handleDelete = async () => {
-  const res = await fetch(`/api/todos?id=${id}`, {
+  const res = await fetch(`https://crud-todo-app-kappa.vercel.app/api/todos?id=${id}`, {
    method: "DELETE"
   })
 
   if (res.ok) {
    console.log("Todo deleted successfully")
-   mutate("/api/todos")
+   mutate("https://crud-todo-app-kappa.vercel.app/api/todos")
   } else {
    console.error("Failed to delete todo")
   }
