@@ -28,7 +28,7 @@ export default function CreateTodo() {
   setIsSubmitting(true)
 
   try {
-   const req = await fetch("/api/todos", {
+   const req = await fetch("https://crud-todo-app-kappa.vercel.app/api/todos", {
     method: "POST",
     headers: {
      "Content-Type": "application/json"
@@ -44,7 +44,7 @@ export default function CreateTodo() {
 
    form.reset()
    setIsDialogOpen(false)
-   mutate("/api/todos")
+   mutate("https://crud-todo-app-kappa.vercel.app/api/todos")
    setErrorMessage("")
   } catch (error) {
    console.error("Error creating todo:", error)
